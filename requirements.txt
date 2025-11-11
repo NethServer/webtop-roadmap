@@ -1,5 +1,6 @@
 # Core dependencies
 requests>=2.31.0,<3.0.0
+dotenv
 
 # Testing dependencies
 pytest>=7.4.0,<8.0.0
