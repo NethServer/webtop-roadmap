@@ -1,0 +1,48 @@
+name: Generate and Publish Milestone Reports
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # Runs every day at 2 AM UTC
+  workflow_dispatch: # Allows manual triggering from the Actions tab
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to commit to the gh-pages branch
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Jira Milestone Reporter
+        env:
+          JIRA_BASE_URL: "https://sonicle.atlassian.net"
+          JIRA_USERNAME: "giacomo.sanchietti@nethesis.it"
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+          JIRA_PROJECT_KEY: "WT"
+          TIMELINE_TITLE: "WebTop Milestones Report"
+          OUTPUT_DIR: "./output"
+        run: python -m src.jira_milestone_reporter
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./output
+          # The following options are recommended for a clean deployment history
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Deploy milestone reports to GitHub Pages'
