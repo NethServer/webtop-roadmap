@@ -6,6 +6,7 @@ Generates self-contained HTML pages:
 """
 
 import logging
+import shutil
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List
@@ -66,6 +67,30 @@ class HTMLRenderer:
         # Get current timestamp
         generated_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
+        # Copy the repository `static/` directory into the output directory so
+        # generated pages can reference assets (favicon, css, images, etc.).
+        try:
+            repo_static = Path("static")
+            if repo_static.exists() and repo_static.is_dir():
+                target_static = Path(output_dir) / "static"
+                # Use copytree with dirs_exist_ok=True to merge into existing folder
+                try:
+                    shutil.copytree(repo_static, target_static, dirs_exist_ok=True)
+                except TypeError:
+                    # Older Python versions may not support dirs_exist_ok; fall back
+                    # to copying files manually.
+                    target_static.mkdir(parents=True, exist_ok=True)
+                    for item in repo_static.iterdir():
+                        dest = target_static / item.name
+                        if item.is_dir():
+                            shutil.copytree(item, dest, dirs_exist_ok=True)
+                        else:
+                            shutil.copy2(item, dest)
+
+                logger.info(f"Copied static assets to output: {target_static}")
+        except Exception as e:
+            logger.warning(f"Failed to copy static folder to output: {e}")
+
         # Build milestone cards HTML
         milestone_cards = []
         for milestone in milestones:
@@ -97,6 +122,7 @@ class HTMLRenderer:
             f"    <meta charset=\"UTF-8\">\n"
             f"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
             f"    <title>{self.title}</title>\n"
+            f"    <link rel=\"icon\" href=\"static/favicon.svg\">\n"
             f"    <style>\n"
             f"        * {{\n"
             f"            margin: 0;\n"
@@ -294,6 +320,7 @@ class HTMLRenderer:
             f"    <meta charset=\"UTF-8\">\n"
             f"    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
             f"    <title>{milestone_name} - {self.title}</title>\n"
+            f"    <link rel=\"icon\" href=\"static/favicon.svg\">\n"
             f"    <style>\n"
             f"        * {{\n"
             f"            margin: 0;\n"

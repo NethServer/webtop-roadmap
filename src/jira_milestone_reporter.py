@@ -29,6 +29,13 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+# Ensure project root is on sys.path so `from src.*` works when running
+# `python src/jira_milestone_reporter.py` directly.
+import os
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
+
 from src.config import Config
 from src.jira_client import JiraClient, JiraClientError
 from src.html_renderer import HTMLRenderer
