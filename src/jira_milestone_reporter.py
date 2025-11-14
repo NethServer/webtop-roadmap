@@ -155,6 +155,7 @@ def main() -> int:
                         "name": milestone_name,
                         "description": milestone.get("description", ""),
                         "issue_count": len(formatted_issues),
+                        "key": milestone_key,
                     }
                 )
 

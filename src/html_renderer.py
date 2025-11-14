@@ -97,17 +97,28 @@ class HTMLRenderer:
             milestone_id = milestone.get("id", "unknown")
             milestone_file = f"milestone-{milestone_id}.html"
             issue_count = milestone.get("issue_count", 0)
+            epic_key = milestone.get("key")
+            epic_link_html = (
+                f'            <p class="epic-link">\n'
+                f'                <a href="{self.base_url}/browse/{epic_key}" target="_blank">Epic {epic_key}</a>\n'
+                f'            </p>\n'
+                if epic_key
+                else ""
+            )
 
             card_html = (
                 f'        <div class="milestone-card">\n'
                 f'            <h3>{milestone.get("name", "Unknown")}</h3>\n'
-                f'            <p class="milestone-description">'
-                f'{milestone.get("description", "")}</p>\n'
+                f'            <p class="milestone-description">\n'
+                f'{milestone.get("description", "")}\n'
+                f'            </p>\n'
                 f'            <div class="milestone-meta">\n'
                 f'                <span class="issue-count">Issues: {issue_count}</span>\n'
                 f'            </div>\n'
-                f'            <a href="{milestone_file}" class="milestone-link">'
-                f'View Details</a>\n'
+                f'{epic_link_html}'
+                f'            <a href="{milestone_file}" class="milestone-link">\n'
+                f'                View Details\n'
+                f'            </a>\n'
                 f'        </div>'
             )
             milestone_cards.append(card_html)
@@ -165,6 +176,18 @@ class HTMLRenderer:
             f"            margin: 10px;\n"
             f"        }}\n"
             f"\n"
+            f"        .epic-link {{\n"
+            f"            margin-top: 8px;\n"
+            f"            font-size: 0.9em;\n"
+            f"            color: #555;\n"
+            f"        }}\n"
+            f"\n"
+            f"        .epic-link a {{\n"
+            f"            color: #764ba2;\n"
+            f"            text-decoration: none;\n"
+            f"            font-weight: 600;\n"
+            f"        }}\n"
+
             f"        .milestone-card:hover {{\n"
             f"            transform: translateY(-4px);\n"
             f"            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);\n"
