@@ -108,7 +108,7 @@ class HTMLRenderer:
 
             card_html = (
                 f'        <div class="milestone-card">\n'
-                f'            <h3>{milestone.get("name", "Unknown")}</h3>\n'
+                f'            <h3><a class="milestone-title-link" href="{milestone_file}">{milestone.get("name", "Unknown")}</a></h3>\n'
                 f'            <p class="milestone-description">\n'
                 f'{milestone.get("description", "")}\n'
                 f'            </p>\n'
@@ -197,6 +197,11 @@ class HTMLRenderer:
             f"            color: #667eea;\n"
             f"            margin-bottom: 10px;\n"
             f"            font-size: 1.3em;\n"
+            f"        }}\n"
+            f"\n"
+            f"        .milestone-title-link {{\n"
+            f"            color: inherit;\n"
+            f"            text-decoration: none;\n"
             f"        }}\n"
             f"\n"
             f"        .milestone-link {{\n"
