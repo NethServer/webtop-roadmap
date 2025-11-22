@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost & Found - WebTop Milestones Report</title>
+    <link rel="icon" href="static/favicon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .breadcrumb {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .issues-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .issues-table th {
+            text-align: left;
+            padding: 12px;
+            font-weight: 600;
+            color: #667eea;
+            font-size: 0.9em;
+        }
+
+        .issues-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .issues-table a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .status-green {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-orange {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-gray {
+            background: #e9ecef;
+            color: #383d41;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lost & Found</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Back to Milestones</a>
+            </div>
+        </header>
+
+        <h2 style="margin-bottom: 20px; color: #333;">Issues (14)</h2>
+
+        <table class="issues-table">
+            <thead>
+                <tr>
+                    <th>Issue Key</th>
+                    <th>Summary</th>
+                    <th>Status</th>
+                    <th>Start Date</th>
+                    <th>Due Date</th>
+                    <th>Assignee</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1215" target="_blank">WT-1215</a></td>
+            <td>PEC-Bridge: improved connection failure notifications</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1178" target="_blank">WT-1178</a></td>
+            <td>Add order to the completed column</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1103" target="_blank">WT-1103</a></td>
+            <td>Completely remove old Rest API Endpoints</td>
+            <td><span class="status status-green">Done</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Matteo Albinola</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1102" target="_blank">WT-1102</a></td>
+            <td>Completely remove old HTML editor</td>
+            <td><span class="status status-green">Done</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Matteo Albinola</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1064" target="_blank">WT-1064</a></td>
+            <td>EAS - Add recurrence and reminder support in tasks</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1034" target="_blank">WT-1034</a></td>
+            <td>View Options > Grouping - Threading with Sent Emails</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-991" target="_blank">WT-991</a></td>
+            <td>Improve onBlurAutoSave function</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Federico Ballarini</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-831" target="_blank">WT-831</a></td>
+            <td>Historicize label name in audit data</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-807" target="_blank">WT-807</a></td>
+            <td>Intercept email attachments imported with LibPST</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-797" target="_blank">WT-797</a></td>
+            <td>ViewModel mode should be set to edit after save</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-795" target="_blank">WT-795</a></td>
+            <td>Increase the length of the title field in the calendar.events table</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-781" target="_blank">WT-781</a></td>
+            <td>Show CalDAV public link without auth</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-734" target="_blank">WT-734</a></td>
+            <td>Mattermost integration through APIs</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-733" target="_blank">WT-733</a></td>
+            <td>Add authorization to create external calendars</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+            </tbody>
+        </table>
+
+        <footer>
+            <p>Generated by Jira Milestone Reporter on 2025-11-22 02:58:50</p>
+        </footer>
+    </div>
+</body>
+</html>

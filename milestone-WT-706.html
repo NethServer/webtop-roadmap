@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Plan - WebTop Milestones Report</title>
+    <link rel="icon" href="static/favicon.svg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        header {
+            margin-bottom: 30px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .breadcrumb {
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .breadcrumb a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .issues-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .issues-table th {
+            text-align: left;
+            padding: 12px;
+            font-weight: 600;
+            color: #667eea;
+            font-size: 0.9em;
+        }
+
+        .issues-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .issues-table a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .status-green {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-orange {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-gray {
+            background: #e9ecef;
+            color: #383d41;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To Plan</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Back to Milestones</a>
+            </div>
+        </header>
+
+        <h2 style="margin-bottom: 20px; color: #333;">Issues (50)</h2>
+
+        <table class="issues-table">
+            <thead>
+                <tr>
+                    <th>Issue Key</th>
+                    <th>Summary</th>
+                    <th>Status</th>
+                    <th>Start Date</th>
+                    <th>Due Date</th>
+                    <th>Assignee</th>
+                </tr>
+            </thead>
+            <tbody>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1480" target="_blank">WT-1480</a></td>
+            <td>Add file name search field</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1236" target="_blank">WT-1236</a></td>
+            <td>Allow mailcard management for an incoming shared account</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1214" target="_blank">WT-1214</a></td>
+            <td>Add conditional logic for html domain signatures</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1213" target="_blank">WT-1213</a></td>
+            <td>Search by attachment name for contact, events and task</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1212" target="_blank">WT-1212</a></td>
+            <td>Create a Task from an email</td>
+            <td><span class="status status-green">Done</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Matteo Albinola</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1211" target="_blank">WT-1211</a></td>
+            <td>Show scheduled Tasks on the calendar grid</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1210" target="_blank">WT-1210</a></td>
+            <td>User setting option to disable automatic sending of invitation on events from sync</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1209" target="_blank">WT-1209</a></td>
+            <td>Automatic CC and/or BCC recipient on outgoing emails for each user</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1204" target="_blank">WT-1204</a></td>
+            <td>Choosing the From in the automatic reply</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1203" target="_blank">WT-1203</a></td>
+            <td>Multiple automatic replies on inbox filter</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1200" target="_blank">WT-1200</a></td>
+            <td>Moving files between folders</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1199" target="_blank">WT-1199</a></td>
+            <td>Feature Request - Webtop > Filter > Rules > Preform these actions - Add new type "Auto Reply the message with response"</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1198" target="_blank">WT-1198</a></td>
+            <td>Quick links to email files already in the cloud</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1181" target="_blank">WT-1181</a></td>
+            <td>Improve scheduled email cron error</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1167" target="_blank">WT-1167</a></td>
+            <td>Collapse the display of child tasks</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1156" target="_blank">WT-1156</a></td>
+            <td>Sending messages via Whatsapp</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1152" target="_blank">WT-1152</a></td>
+            <td>Add individual recipient email notification of cloud generated download link</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1147" target="_blank">WT-1147</a></td>
+            <td>Customize the font color of unread messages</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1144" target="_blank">WT-1144</a></td>
+            <td>Synchronization of labels with external clients</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1138" target="_blank">WT-1138</a></td>
+            <td>Setting for automatic tree opening by selecting the shared root</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1123" target="_blank">WT-1123</a></td>
+            <td>Add request whether to put the password in the message on cloud link </td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1121" target="_blank">WT-1121</a></td>
+            <td>Quick search for IMAP folders</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1107" target="_blank">WT-1107</a></td>
+            <td>Events from friday to monday create interface error</td>
+            <td><span class="status status-green">Done</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1095" target="_blank">WT-1095</a></td>
+            <td>Change ordering of sub-folders</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1082" target="_blank">WT-1082</a></td>
+            <td>Add action move in interactive message menu</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1075" target="_blank">WT-1075</a></td>
+            <td>Link mismatch detect</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1058" target="_blank">WT-1058</a></td>
+            <td>Revamp search results grid</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1047" target="_blank">WT-1047</a></td>
+            <td>Improve the display of search results</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1040" target="_blank">WT-1040</a></td>
+            <td>Smarter search with broken, punctuation-free keys</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-1010" target="_blank">WT-1010</a></td>
+            <td>Save edit columns displayed in grid</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-962" target="_blank">WT-962</a></td>
+            <td>Create sieve rules for shared accounts</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-961" target="_blank">WT-961</a></td>
+            <td>Creating new filters at the top of the list</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-955" target="_blank">WT-955</a></td>
+            <td>Organize meetings starting from an email</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-935" target="_blank">WT-935</a></td>
+            <td>Authorization for OTP page access</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-920" target="_blank">WT-920</a></td>
+            <td>Add box resizing of the description of an event or task</td>
+            <td><span class="status status-green">Done</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Matteo Albinola</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-918" target="_blank">WT-918</a></td>
+            <td>Search on filters already created</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-912" target="_blank">WT-912</a></td>
+            <td>Eliminate drop-down choice on company field</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-895" target="_blank">WT-895</a></td>
+            <td>Show labels in Appointments and Tasks previewed under mail folders (supplementary panels)</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-858" target="_blank">WT-858</a></td>
+            <td>Choice of address book for automatic recipient search</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-856" target="_blank">WT-856</a></td>
+            <td>Labels copied automatically on sent emails</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-853" target="_blank">WT-853</a></td>
+            <td>Add information about the organizer of an event to a shared calendar</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-819" target="_blank">WT-819</a></td>
+            <td>Add support to custom attributes entered by the client synchronized with CalDAV</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-812" target="_blank">WT-812</a></td>
+            <td>Being able to upload a folder with files to the cloud</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-798" target="_blank">WT-798</a></td>
+            <td>Receive the status changes of the INBOX emails on the websockets</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-740" target="_blank">WT-740</a></td>
+            <td>Add option for admin to configure user allowed ip networks</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-739" target="_blank">WT-739</a></td>
+            <td>Enhance mail print layout</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-738" target="_blank">WT-738</a></td>
+            <td>Chat with channels and external guests</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-735" target="_blank">WT-735</a></td>
+            <td>Admin configuration of separate archiving, with general and specifi user rules (from date, folders, ...)</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-729" target="_blank">WT-729</a></td>
+            <td>Activities and appointements small view should show "+" button to quickly add an event or task</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+        <tr>
+            <td><a href="https://sonicle.atlassian.net/browse/WT-727" target="_blank">WT-727</a></td>
+            <td>Admin panel for shared resources management</td>
+            <td><span class="status status-gray">To Do</span></td>
+            <td>-</td>
+            <td>-</td>
+            <td>Unassigned</td>
+        </tr>
+            </tbody>
+        </table>
+
+        <footer>
+            <p>Generated by Jira Milestone Reporter on 2025-11-22 02:58:51</p>
+        </footer>
+    </div>
+</body>
+</html>
